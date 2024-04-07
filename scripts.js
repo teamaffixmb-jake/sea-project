@@ -39,11 +39,32 @@ let titles = [
 // Your final submission should have much more data than this, and
 // you should use more than just an array of strings to store it all.
 
+// Global variable, defined to reduce number of
+//     getElementById() calls.
+var cardContainer = null;
+
+function windowLoaded() {
+    console.log("wkhbdfkjghdfkjghdfkjg");
+    initGlobals();
+    refreshCards();
+}
+
+function initGlobals() {
+    cardContainer = document.getElementById(CARD_CONTAINER_ID);
+}
+
 // This function adds cards the page to display the data in the array
-function showCards() {
-    const cardContainer = document.getElementById("card-container");
+function refreshCards() {
+    clearCards();
+    showCards();
+}
+
+function clearCards() {
     cardContainer.innerHTML = "";
-    const templateCard = document.querySelector(".card");
+}
+
+function showCards() {
+    const templateCard = document.querySelector(CARD_CLASS_ID);
 
     for (let i = 0; i < titles.length; i++) {
         let title = titles[i];
@@ -82,7 +103,7 @@ function editCardContent(card, newTitle, newImageURL) {
 }
 
 // This calls the addCards() function when the page is first loaded
-document.addEventListener("DOMContentLoaded", showCards);
+document.addEventListener("DOMContentLoaded", windowLoaded);
 
 function quoteAlert() {
     console.log("Button Clicked!");
@@ -95,32 +116,3 @@ function removeLastCard() {
     titles.pop(); // Remove last item in titles array
     showCards(); // Call showCards again to refresh
 }
-
-const fetchRepoFolders = async (owner, repo, path = "") => {
-    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
-    const response = await fetch(apiUrl, {
-        headers: {
-            Accept: "application/vnd.github.v3+json",
-        },
-    });
-
-    if (!response.ok) {
-        throw new Error("Failed to fetch repository contents");
-    }
-
-    const data = await response.json();
-
-    const folders = data
-        .filter((item) => item.type === "dir")
-        .map((folder) => folder.name);
-    return folders;
-};
-
-// Example usage
-fetchRepoFolders("username", "repo_name")
-    .then((folders) => {
-        console.log("Folders:", folders);
-    })
-    .catch((error) => {
-        console.error("Error:", error);
-    });
