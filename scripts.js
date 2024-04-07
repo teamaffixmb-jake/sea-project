@@ -23,6 +23,14 @@
  *
  */
 
+///////////////////////////////
+/////////// GLOBALS ///////////
+///////////////////////////////
+//#region GLOBALS
+
+var cardContainer = null;
+const templateCard = null;
+
 const FRESH_PRINCE_URL =
     "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg";
 const CURB_POSTER_URL =
@@ -39,9 +47,12 @@ let titles = [
 // Your final submission should have much more data than this, and
 // you should use more than just an array of strings to store it all.
 
-// Global variable, defined to reduce number of
-//     getElementById() calls.
-var cardContainer = null;
+//#endregion
+
+///////////////////////////////
+////////// FUNCTIONS //////////
+///////////////////////////////
+//#region FUNCTIONS
 
 function windowLoaded() {
     console.log("wkhbdfkjghdfkjghdfkjg");
@@ -50,7 +61,8 @@ function windowLoaded() {
 }
 
 function initGlobals() {
-    cardContainer = document.getElementById(CARD_CONTAINER_ID);
+    this.cardContainer = document.getElementById("card-container");
+    this.templateCard = document.querySelector(".card");
 }
 
 // This function adds cards the page to display the data in the array
@@ -60,12 +72,10 @@ function refreshCards() {
 }
 
 function clearCards() {
-    cardContainer.innerHTML = "";
+    this.cardContainer.innerHTML = "";
 }
 
 function showCards() {
-    const templateCard = document.querySelector(CARD_CLASS_ID);
-
     for (let i = 0; i < titles.length; i++) {
         let title = titles[i];
 
@@ -80,13 +90,13 @@ function showCards() {
             imageURL = EAST_LOS_HIGH_POSTER_URL;
         }
 
-        const nextCard = templateCard.cloneNode(true); // Copy the template card
-        editCardContent(nextCard, title, imageURL); // Edit title and image
-        cardContainer.appendChild(nextCard); // Add new card to the container
+        this.cardContainer.appendChild(createCard(title, imageURL)); // Add new card to the container
     }
 }
 
-function editCardContent(card, newTitle, newImageURL) {
+function createCard(newTitle, newImageURL, bp1, bp2, bp3) {
+    const card = this.templateCard.cloneNode(true);
+
     card.style.display = "block";
 
     const cardHeader = card.querySelector("h2");
@@ -100,7 +110,11 @@ function editCardContent(card, newTitle, newImageURL) {
     // View the output by right clicking on your website,
     // select "Inspect", then click on the "Console" tab
     console.log("new card:", newTitle, "- html: ", card);
+
+    return card;
 }
+
+//#endregion
 
 // This calls the addCards() function when the page is first loaded
 document.addEventListener("DOMContentLoaded", windowLoaded);
