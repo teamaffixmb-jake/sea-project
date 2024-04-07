@@ -50,9 +50,9 @@ function catalogInstance(title, url, bp0, bp1, bp2) {
 
 // Catalog data format:
 //    {
-//        CATEGORY_0: [ CARD00, CARD01, CARD02, ... ]
-//        CATEGORY_1: [ CARD10, CARD11, CARD12, ... ]
-//        CATEGORY_2: [ CARD20, CARD21, CARD22, ... ]
+//        CATEGORY_0: {mask: bool, instances: [ CARD00, CARD01, ... ]}
+//        CATEGORY_1: {mask: bool, instances: [ CARD10, CARD11, ... ]}
+//        CATEGORY_2: {mask: bool, instances: [ CARD20, CARD21, ... ]}
 //    }
 var catalogData = {
     "Programming Languages": {

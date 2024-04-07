@@ -18,6 +18,11 @@ body {
     color: white;
 }
 
+section {
+    display: -webkit-flex;
+    display: flex;
+}
+
 #card-container {
     display: flex;
     justify-content: center;
