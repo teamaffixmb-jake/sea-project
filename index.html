@@ -14,18 +14,14 @@
         <header class="main-header">
             <h1 class="title">Jake's Picks</h1>
         </header>
-        <section>
+        <section id="body-section">
             <div>
                 <h3>Data Filters</h3>
-                <ul id="filter-list">
-                    <li>
-                        <input
-                            type="checkbox"
-                            id="filter-checkbox-programming-languages"
-                        />
-                        <label>Programming Languages</label>
-                    </li>
-                </ul>
+                <ul id="filter-list"></ul>
+                <li class="filter-li" style="display: none">
+                    <input type="checkbox" checked />
+                    <label>Example Filter</label>
+                </li>
             </div>
             <div id="card-container"></div>
             <div class="card" style="display: none">

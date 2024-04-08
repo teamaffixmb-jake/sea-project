@@ -38,6 +38,8 @@ const templateCard = null;
 ///////////////////////////////
 //#region CATALOG DATA / FXNS
 
+// Function that abstracts away the
+//     key names for struct creation.
 function catalogInstance(title, url, bp0, bp1, bp2) {
     return {
         title,
@@ -96,6 +98,7 @@ function applyFilter(category, enable) {
 function windowLoaded() {
     initGlobals();
     refreshCards();
+    showFilterList();
 }
 
 function initGlobals() {
@@ -161,6 +164,44 @@ function createCard(instance) {
     console.log("new card:", instance.title, "- html: ", card);
 
     return card;
+}
+
+function showFilterList() {
+    // This variable need not be global,
+    //     since this fxn is only called once.
+    const filterList = document.getElementById("filter-list");
+
+    for (const [categoryName, _] of Object.entries(this.catalogData)) {
+        filterList.appendChild(createFilterListItem(categoryName));
+    }
+}
+
+function createFilterListItem(categoryName) {
+    const filterTemplate = document.querySelector(".filter-li");
+
+    const filter = filterTemplate.cloneNode(true);
+
+    filter.style.display = "block";
+
+    // Edit checkbox
+    const checkBox = filter.querySelector("input");
+    checkBox.addEventListener(
+        "click",
+        createFilterClickedEventHandler(categoryName, checkBox)
+    );
+
+    // Edit label
+    const label = filter.querySelector("label");
+    label.textContent = categoryName;
+
+    return filter;
+}
+
+function createFilterClickedEventHandler(categoryName, checkBox) {
+    return () => {
+        this.catalogData[categoryName].mask = checkBox.checked;
+        refreshCards();
+    };
 }
 
 //#endregion

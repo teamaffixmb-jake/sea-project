@@ -8,6 +8,7 @@ body {
 .main-header {
     background-color: rgba(47, 63, 185, 0.3);
     padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .title {
@@ -22,6 +23,9 @@ body {
 section {
     display: -webkit-flex;
     display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 100px;
 }
 
 #card-container {
