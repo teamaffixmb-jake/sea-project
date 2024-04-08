@@ -67,6 +67,48 @@ var catalogData = {
                 "Strongly typed",
                 "Highly feature-rich"
             ),
+            catalogInstance(
+                "C#",
+                "https://upload.wikimedia.org/wikipedia/commons/d/d2/C_Sharp_Logo_2023.svg",
+                "The first real language I learned",
+                "Strongly typed",
+                "Very easy to use"
+            ),
+            catalogInstance(
+                "Python",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png",
+                "The first real language I learned",
+                "Strongly typed",
+                "Very easy to use"
+            ),
+            catalogInstance(
+                "Python",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png",
+                "The first real language I learned",
+                "Strongly typed",
+                "Very easy to use"
+            ),
+            catalogInstance(
+                "Python",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png",
+                "The first real language I learned",
+                "Strongly typed",
+                "Very easy to use"
+            ),
+            catalogInstance(
+                "Python",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png",
+                "The first real language I learned",
+                "Strongly typed",
+                "Very easy to use"
+            ),
+            catalogInstance(
+                "Python",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png",
+                "The first real language I learned",
+                "Strongly typed",
+                "Very easy to use"
+            ),
         ],
     },
     Animals: {
@@ -74,11 +116,16 @@ var catalogData = {
         instances: [
             catalogInstance(
                 "Cats",
-                "https://cdn.britannica.com/70/234870-050-D4D024BB/Orange-colored-cat-yawns-displaying-teeth.jpg"
+                "https://cdn.britannica.com/70/234870-050-D4D024BB/Orange-colored-cat-yawns-displaying-teeth.jpg",
+                "Friendly purring pets",
+                "Like listening to piano",
+                "Comforting animals"
             ),
             catalogInstance(
                 "Dogs",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Labrador_Retriever_portrait.jpg/290px-Labrador_Retriever_portrait.jpg"
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Labrador_Retriever_portrait.jpg/290px-Labrador_Retriever_portrait.jpg",
+                "Very energetic pets",
+                "Like to go on walks"
             ),
         ],
     },
@@ -149,6 +196,7 @@ function createCard(instance) {
     // Tiny helper for adding bullet point
     //     to unordered list.
     function addBulletPoint(text) {
+        if (text == undefined || text == null) return;
         const bp = document.createElement("li");
         bp.appendChild(document.createTextNode(text));
         cardBPs.appendChild(bp);
