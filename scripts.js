@@ -77,9 +77,9 @@ var catalogData = {
             catalogInstance(
                 "Python",
                 "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png",
-                "The first real language I learned",
-                "Strongly typed",
-                "Very easy to use"
+                "Useful for data science",
+                "Duck typed",
+                "Very feature-rich language"
             ),
         ],
     },
@@ -121,6 +121,29 @@ var catalogData = {
                 "Acoutstic Guitar",
                 "https://www.martinguitar.com/dw/image/v2/BGJT_PRD/on/demandware.static/-/Sites-martin-master-catalog/default/dwfa364cc0/images/SC-13E-Special-Burst/SC-13E-Special-Burst_f.jpg?sw=600&sh=600&sm=fit",
                 "I love cinematic music (acoustic)"
+            ),
+        ],
+    },
+    Activities: {
+        mask: true,
+        instances: [
+            catalogInstance(
+                "Writing Music",
+                "https://blog.native-instruments.com/wp-content/uploads/dynamic/2023/02/pillar-page-how-to-make-electronic-music-2-1200x0-c-default.jpg",
+                "I write music, EDM/Classical",
+                "Produce music on computer"
+            ),
+            catalogInstance(
+                "Playing Piano",
+                "https://www.shutterstock.com/image-photo/isolated-hands-playing-on-piano-260nw-1985649401.jpg"
+            ),
+            catalogInstance(
+                "Programming",
+                "https://media.istockphoto.com/id/1386341272/photo/abstract-modern-tech-of-programming-code-screen-developer.jpg?s=612x612&w=0&k=20&c=16FJUoZ6j-XmBDF0g-llzkJaIsdpf6uz46D4eQfL_LM="
+            ),
+            catalogInstance(
+                "Working on Math",
+                "https://static.scientificamerican.com/sciam/cache/file/060DE11D-D6B0-46B0-836CF8893C964FDD_source.jpg?w=600"
             ),
         ],
     },
