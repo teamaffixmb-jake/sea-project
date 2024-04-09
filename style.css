@@ -44,10 +44,10 @@ section {
 }
 
 #card-container {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .card {
@@ -57,6 +57,7 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 5px;
     background-color: rgb(255, 255, 255);
+    flex-basis: calc(25% - 10px);
 }
 
 .card-content {
