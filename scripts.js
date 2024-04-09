@@ -129,6 +129,24 @@ var catalogData = {
             ),
         ],
     },
+    Instruments: {
+        mask: true,
+        instances: [
+            catalogInstance(
+                "Piano",
+                "https://www.yamaha.com/us/pianos/images/homepageStill.jpg",
+                "I play this instrument",
+                "I really like classical music",
+                "I also like cinematic music"
+            ),
+            catalogInstance(
+                "Violin",
+                "https://www.stringworks.com/cdn/shop/products/virtvntop2020_800x.jpg?v=1584031223",
+                "I really like how it sounds",
+                "I have attended classical concerts"
+            ),
+        ],
+    },
 };
 
 function applyFilter(category, enable) {
