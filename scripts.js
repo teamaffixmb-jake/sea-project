@@ -159,6 +159,32 @@ var catalogData = {
             ),
         ],
     },
+    "TV Shows": {
+        mask: true,
+        instances: [
+            catalogInstance(
+                "The Flash",
+                "https://emorywheel.com/wp-content/uploads/2016/10/ac1fafb4cef5bb6bf83b03a08c3d20d3.jpg",
+                "Has a great plot twist"
+            ),
+            catalogInstance(
+                "Squid Game",
+                "https://www.americamagazine.org/sites/default/files/main_image/2021/10/28/squid-game.png.png",
+                "Very interesting plot"
+            ),
+        ],
+    },
+    Books: {
+        mask: true,
+        instances: [
+            catalogInstance(
+                "Godel, Escher, Bach",
+                "https://target.scene7.com/is/image/Target/GUEST_929d887c-5ccc-453b-b616-b04bd7250344?wid=488&hei=488&fmt=pjpeg",
+                "Connections between recursion, music, paradoxes",
+                "Fascinating mathematical ideas"
+            ),
+        ],
+    },
 };
 
 function applyFilter(category, enable) {
