@@ -81,34 +81,6 @@ var catalogData = {
                 "Strongly typed",
                 "Very easy to use"
             ),
-            catalogInstance(
-                "Python",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png",
-                "The first real language I learned",
-                "Strongly typed",
-                "Very easy to use"
-            ),
-            catalogInstance(
-                "Python",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png",
-                "The first real language I learned",
-                "Strongly typed",
-                "Very easy to use"
-            ),
-            catalogInstance(
-                "Python",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png",
-                "The first real language I learned",
-                "Strongly typed",
-                "Very easy to use"
-            ),
-            catalogInstance(
-                "Python",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png",
-                "The first real language I learned",
-                "Strongly typed",
-                "Very easy to use"
-            ),
         ],
     },
     Animals: {
@@ -143,7 +115,12 @@ var catalogData = {
                 "Violin",
                 "https://www.stringworks.com/cdn/shop/products/virtvntop2020_800x.jpg?v=1584031223",
                 "I really like how it sounds",
-                "I have attended classical concerts"
+                "I've attended classical concerts"
+            ),
+            catalogInstance(
+                "Acoutstic Guitar",
+                "https://www.martinguitar.com/dw/image/v2/BGJT_PRD/on/demandware.static/-/Sites-martin-master-catalog/default/dwfa364cc0/images/SC-13E-Special-Burst/SC-13E-Special-Burst_f.jpg?sw=600&sh=600&sm=fit",
+                "I love cinematic music (acoustic)"
             ),
         ],
     },
