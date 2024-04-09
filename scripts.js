@@ -135,15 +135,27 @@ var catalogData = {
             ),
             catalogInstance(
                 "Playing Piano",
-                "https://www.shutterstock.com/image-photo/isolated-hands-playing-on-piano-260nw-1985649401.jpg"
+                "https://www.shutterstock.com/image-photo/isolated-hands-playing-on-piano-260nw-1985649401.jpg",
+                "I love to play piano",
+                "I create original music on piano"
             ),
             catalogInstance(
                 "Programming",
-                "https://media.istockphoto.com/id/1386341272/photo/abstract-modern-tech-of-programming-code-screen-developer.jpg?s=612x612&w=0&k=20&c=16FJUoZ6j-XmBDF0g-llzkJaIsdpf6uz46D4eQfL_LM="
+                "https://media.istockphoto.com/id/1386341272/photo/abstract-modern-tech-of-programming-code-screen-developer.jpg?s=612x612&w=0&k=20&c=16FJUoZ6j-XmBDF0g-llzkJaIsdpf6uz46D4eQfL_LM=",
+                "I work on AI/ML projects",
+                "I've programmed cryptography projects"
             ),
             catalogInstance(
                 "Working on Math",
-                "https://static.scientificamerican.com/sciam/cache/file/060DE11D-D6B0-46B0-836CF8893C964FDD_source.jpg?w=600"
+                "https://static.scientificamerican.com/sciam/cache/file/060DE11D-D6B0-46B0-836CF8893C964FDD_source.jpg?w=600",
+                "I love to ask fundamental questions",
+                "Math is prerequisite to CS implementation"
+            ),
+            catalogInstance(
+                "Hanging with Friends",
+                "https://i.pinimg.com/originals/61/1f/a5/611fa599504c60174705728aee0a7df6.jpg",
+                "Work/life balance is vital",
+                "I love getting to talk to people"
             ),
         ],
     },
